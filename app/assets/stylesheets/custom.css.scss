@@ -1,0 +1,254 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+@mixin box_sizing {
+  -moz-box-string: border-box;
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+$grayMediumLight: #eaeaea;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-image: url('norwegian_rose_@2X.png');
+  background-repeat: repeat;
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.container-fluid
+{
+  max-width: 960px;
+  margin: auto;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.6em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+/* navbar */
+
+.navbar .nav > li > a {
+  color: #FFF;
+  font-size: 16px;  
+}
+
+.navbar .nav > li > a:hover {
+  color: #FFF;  
+  text-decoration: underline;
+}
+.navbar-inner {
+  background-color: #2c2c2c;
+  background-image: -moz-linear-gradient(top, #430A40, #0D0A43);
+  background-image: -ms-linear-gradient(top, #430A40, #0D0A43);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#430A40), to(#0D0A43));
+  background-image: -webkit-linear-gradient(top, #430A40, #0D0A43);
+  background-image: -o-linear-gradient(top, #430A40, #0D0A43);
+  background-image: linear-gradient(top, #430A40, #0D0A43);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF0D0A43', GradientType=0);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+//@media(max-width: 979px) { .navbar .nav.pull-right { float: left; a{font-size: 13px;}} }
+/* button */
+
+.btn-primary.purple{
+  width: 20%;
+  height: 30px;
+  font-size: 22px;
+  //vertical-align:   middle;
+  background-color: #AD1AA6;
+  background-image: -moz-linear-gradient(top, #AD1AA6, #430A40);
+  background-image: -ms-linear-gradient(top, #AD1AA6, #430A40);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#430a40), to(#430A40));
+  background-image: -webkit-linear-gradient(top, #AD1AA6, #430A40);
+  background-image: -o-linear-gradient(top, #AD1AA6, #430A40);
+  background-image: linear-gradient(top, #AD1AA6, #430A40);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0088CC', endColorstr='#FFAD1AA6', GradientType=0);
+  border-color: #AD1AA6 #AD1AA6 #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-primary.grey{
+  width: 20%;
+  height: 30px;
+  font-size: 22px;
+  }
+
+.btn-primary.purple:hover {
+  background-color: #430a40;
+ }
+
+/*splash */
+
+.splash {
+  background-image: url('http://blisschron.org/images/pearlst.jpg');
+
+  div{
+    color: purple;
+    background-color: white;
+  }
+
+}
