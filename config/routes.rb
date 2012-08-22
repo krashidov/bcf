@@ -6,6 +6,7 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup',  to: 'users#new'
+  match '/share',   to: 'users#share'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 

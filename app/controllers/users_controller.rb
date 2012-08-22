@@ -11,9 +11,12 @@ class UsersController < ApplicationController
         @user = User.new (params[:user])
         if @user.save
             flash[:success] = "Thanks " + @user.name + ", we will email you with updates."
-            redirect_to root_path
+            redirect_to share_path
         else 
             render 'new'
         end
+    end
+
+    def share
     end
 end

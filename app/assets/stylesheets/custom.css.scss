@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-image: url('norwegian_rose_@2X.png');
+  background-image: url('escheresque_@2X.png');
   background-repeat: repeat;
   padding-top: 60px;
 }
@@ -47,16 +47,15 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
+  //text-align: center;
+  color: black;
 }
 
 h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
+  font-size: 2.2em;
   margin-bottom: 30px;
-  text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: black;
 }
 
 p {
@@ -74,6 +73,7 @@ p {
 /* header */
 
 #logo {
+  height:25%;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -190,14 +190,17 @@ input, textarea, select, .uneditable-input {
   color: #FFF;  
   text-decoration: underline;
 }
+
+$topcolorNav :#C71CC1;
+$bottomcolorNav :#71116D;
 .navbar-inner {
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #430A40, #0D0A43);
-  background-image: -ms-linear-gradient(top, #430A40, #0D0A43);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#430A40), to(#0D0A43));
-  background-image: -webkit-linear-gradient(top, #430A40, #0D0A43);
-  background-image: -o-linear-gradient(top, #430A40, #0D0A43);
-  background-image: linear-gradient(top, #430A40, #0D0A43);
+  background-color: #C71CC1;
+  background-image: -moz-linear-gradient(top, $topcolorNav, $bottomcolorNav);
+  background-image: -ms-linear-gradient(top, $topcolorNav, #430A40);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($topcolorNav), to($bottomcolorNav));
+  background-image: -webkit-linear-gradient(top, $topcolorNav, $bottomcolorNav);
+  background-image: -o-linear-gradient(top, $topcolorNav, $bottomcolorNav);
+  background-image: linear-gradient(top, $topcolorNav, $bottomcolorNav);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF333333', endColorstr='#FF0D0A43', GradientType=0);
   -webkit-border-radius: 4px;
@@ -213,8 +216,8 @@ input, textarea, select, .uneditable-input {
 /* button */
 
 .btn-primary.purple{
-  width: 20%;
-  height: 30px;
+  //width: 20%;
+  //height: 30px;
   font-size: 22px;
   //vertical-align:   middle;
   background-color: #AD1AA6;
@@ -226,14 +229,14 @@ input, textarea, select, .uneditable-input {
   background-image: linear-gradient(top, #AD1AA6, #430A40);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0088CC', endColorstr='#FFAD1AA6', GradientType=0);
-  border-color: #AD1AA6 #AD1AA6 #002a80;
+  border-color: #AD1AA6 #AD1AA6 #000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
 .btn-primary.grey{
-  width: 20%;
-  height: 30px;
+  //width: 20%;
+  //height: 30px;
   font-size: 22px;
   }
 
@@ -244,11 +247,37 @@ input, textarea, select, .uneditable-input {
 /*splash */
 
 .splash {
-  background-image: url('http://blisschron.org/images/pearlst.jpg');
+  background-image: url('subtle_dots_@2X.png');
 
   div{
     color: purple;
     background-color: white;
   }
 
+  h1 {
+
+    text-decoration: italics;
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: black;
+
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+}
+
+
+.vision {
+  p{
+      margin-bottom: 30px;
+  }
+}
+
+.hero-unit.about 
+{
+  background-image: url('team.png') 
 }
